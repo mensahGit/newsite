@@ -22,7 +22,7 @@ body {
 header {
 	width: 100%;
 	height: 5%;
-	background-color: #52bad5;
+	background-color: #FF9900;
 	border-bottom: 1px solid #2C9AB7;
 }
 .logo {
@@ -73,7 +73,7 @@ ul li:hover a {
 }
 /* Hero Section */
 .hero {
-	background-color: #B3B3B3;
+	background-color: #333333;
 	padding-top: 150px;
 	padding-bottom: 150px;
 }
@@ -147,7 +147,7 @@ ul li:hover a {
 }
 /* Parallax Section */
 .banner {
-	background-color: #2D9AB7;
+	background-color: #ff9900;
 	background-image: url(../images/parallax.png);
 	height: 400px;
 	background-attachment: fixed;
@@ -265,7 +265,7 @@ footer {
 .logo {
 	width: 100%;
 	text-align: center;
-	margin-top: 13px;
+	margin-top: 33px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
