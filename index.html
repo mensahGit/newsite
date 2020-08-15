@@ -1,105 +1,1130 @@
-<!doctype html>
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<title>Light Theme</title>
-<link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
-<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
-<script>var __adobewebfontsappname__="dreamweaver"</script>
-<script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>KiaKards - An Online Kard Boutique</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Responsive CSS -->
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!-- Stripe JS -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="/client.js" defer></script>
+
 </head>
+
 <body>
-<!-- Main Container -->
-<div class="container"> 
-  <!-- Navigation -->
-  <header> <a href="">
-    <h4 class="logo">KIAKARDS</h4>
-    </a>
-    <nav>
-      <ul>
-        <li><a href="#hero">HOME</a></li>
-        <li><a href="https://mensahgit.github.io/newsite/multi.html">ABOUT</a></li>
-		  <li><a href="https://mensahgit.github.io/newsite/grid.html">PURCHASE</a></li>
-        <li> <a href="#contact">CONTACT</a></li>
-		  <li> <a href="#about">MOO</a></li>
-		  <li> <a href="#hero">FOO</a></li>
-      </ul>
-    </nav>
-  </header>
-  <img src="images/BirdHouse_Template_test2.png" width="1024" height="1024" alt=""/>  <!-- Hero Section -->
-  <section class="hero" id="hero">
-<h2 class="hero_header">KIAKARDS&nbsp; <span class="light">&nbsp;</span></h2>
-    <p class="tagline">WRITE LIKE YOU MEAN IT.</p>
-  </section>
-  <!-- About Section -->
-  <section class="about" id="about">
-    <h2 class="hidden">AboutZZZZ</h2>
-    <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-    <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-    <p class="text_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-  </section>
-  <!-- Stats Gallery Section -->
-  <div class="gallery">
-    <div class="thumbnail">
-      <h1 class="stats">1500</h1>
-      <h4>TITLE</h4>
-      <p>One line description</p>
+    <!-- Preloader Start -->
+    <div id="preloader">
+        <div class="colorlib-load"></div>
     </div>
-    <div class="thumbnail">
-      <h1 class="stats">2300</h1>
-      <h4>TITLE</h4>
-      <p>One line description</p>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header_area animated">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <!-- Menu Area Start -->
+                <div class="col-12 col-lg-10">
+                    <div class="menu_area">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <!-- Logo -->
+                            <a class="navbar-brand" href="#">KiaKards.</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                            <!-- Menu Area -->
+                            <div class="collapse navbar-collapse" id="kk-navbar">
+                                <ul class="navbar-nav ml-auto" id="nav">
+                                    <li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#features">Benefits</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#screenshot">App</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#kardshop">Shop</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#team">KardMaker</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                                </ul>
+                                <div class="sing-up-button d-lg-none">
+                                    <a href="#">Sign Up Free</a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Signup btn -->
+                <div class="col-12 col-lg-2">
+                    <div class="sing-up-button d-none d-lg-block">
+                        <a href="#">Sign Up Free</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Wellcome Area Start ***** -->
+    <section class="wellcome_area clearfix" id="home">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 col-md">
+                    <div class="wellcome-heading">
+                        <!-- <h2>KiaKards</h2> -->
+                        <h3 id="meanit">Write Like You Mean It.</h3>
+                        <img src="img/bg-img/kkLogoSoloMain.png" class="laylow">
+                        <!-- <h3>KK</h3> -->
+                        <!-- <h3>Write Like U Mean It.</h3> -->
+                    </div>
+
+                    <div class="get-start-area">
+                        <!-- Form Start -------
+                        <form action="#" method="post" class="form-inline">
+                            <input type="email" class="form-control email" placeholder="name@company.com">
+                           
+                        </form>
+                        ------Form End --> 
+
+                        <input type="submit" class="submit" value="Get Started">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Welcome thumb -->
+        <div class="welcome-thumb wow fadeInUp" data-wow-delay="0.5s">
+            <img src="img/bg-img/kkSplash.png" class="grandma" alt="">
+        </div>
+    </section>
+    <!-- ***** Welcome Area End ***** -->
+
+    <!-- ***** Special Area Start ***** -->
+    <section class="special-area bg-white section_padding_100" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Section Heading Area -->
+                    <div class="section-heading text-center">
+                        <h2><i>"Grandma Always Said..</i></h2>
+                        <h2>If you're gonna do it, do it <i>right!</i></h2>
+                        <div class="line-shape"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Single Special Area -->
+                <div class="col-12 col-md-4">
+                    <div class="single-special text-center wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="single-icon">
+                            <i class="ti-mobile" aria-hidden="true"></i>
+                        </div>
+                        <h4>Easy To Order</h4>
+                        <p>We build pretty complex tools and this allows us to take designs and turn them into functional quickly and easily</p>
+                    </div>
+                </div>
+                <!-- Single Special Area -->
+                <div class="col-12 col-md-4">
+                    <div class="single-special text-center wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="single-icon">
+                            <i class="ti-ruler-pencil" aria-hidden="true"></i>
+                        </div>
+                        <h4>Unique Design</h4>
+                        <p>We build pretty complex tools and this allows us to take designs and turn them into functional quickly and easily</p>
+                    </div>
+                </div>
+                <!-- Single Special Area -->
+                <div class="col-12 col-md-4">
+                    <div class="single-special text-center wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="single-icon">
+                            <i class="ti-heart" aria-hidden="true"></i>
+                        </div>
+                        <h4>Made With Love</h4>
+                        <p>We build pretty complex tools and this allows us to take designs and turn them into functional quickly and easily</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Special Description Area -->
+        <div class="special_description_area mt-150">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <!-- class="special_description_img" -->
+                        <div class="wow fadeInUp" data-wow-delay="0.6s">
+                            <img src="img/bg-img/video_kard.png" class="grandma_rev" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-5 ml-xl-auto">
+                        <div class="special_description_content">
+                            <h2><i>Psst!</i> Our Mobile App</h2>
+                            <p>Everyone's got a story. And the story of KiaKards is one of joy. The premise rests on the ever-present joy of both celebrating life and nurturing creativity. Feel free to explore KiaKards and become inspired. Find your inspiration not only to write but share your creativity and insights with family, friends and the world.</p>
+                            <div class="app-download-area">
+                                <div class="app-download-btn wow fadeInUp" data-wow-delay="0.2s">
+                                    <!-- Google Store Btn -->
+                                    <a href="#">
+                                        <i class="fa fa-android"></i>
+                                        <p class="mb-0"><span>available on</span> Google Store</p>
+                                    </a>
+                                </div>
+                                <div class="app-download-btn wow fadeInDown" data-wow-delay="0.4s">
+                                    <!-- Apple Store Btn -->
+                                    <a href="#">
+                                        <i class="fa fa-apple"></i>
+                                        <p class="mb-0"><span>available on</span> Apple Store</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Special Area End ***** -->
+
+    <!-- ***** Awesome Features Start ***** -->
+    <section class="awesome-feature-area bg-white section_padding_0_50 clearfix" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Heading Text -->
+                    <div class="section-heading text-center">
+                        <h2>Awesome Benefits</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Single Feature Start -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-feature">
+                        <i class="ti-user" aria-hidden="true"></i>
+                        <h5>Wonderful Experience</h5>
+                        <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <!-- Single Feature Start -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-feature">
+                        <i class="ti-pulse" aria-hidden="true"></i>
+                        <h5>Fast and Simple</h5>
+                        <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <!-- Single Feature Start -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-feature">
+                        <i class="ti-dashboard" aria-hidden="true"></i>
+                        <h5>Clean Design</h5>
+                        <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <!-- Single Feature Start -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-feature">
+                        <i class="ti-palette" aria-hidden="true"></i>
+                        <h5>Perfect Paper</h5>
+                        <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <!-- Single Feature Start -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-feature">
+                        <i class="ti-crown" aria-hidden="true"></i>
+                        <h5>One-Of-A-Kind</h5>
+                        <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <!-- Single Feature Start -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-feature">
+                        <i class="ti-headphone" aria-hidden="true"></i>
+                        <h5>24/7 Online Support</h5>
+                        <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ***** Awesome Features End ***** -->
+
+    <!-- ***** Video Area Start ***** -->
+    <div class="video-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                	<span>Look! These people purchased my kards and look how happy they are right now!</span>
+                    <!-- Video Area Start -->
+                    <div class="video-area" class="section_padding_200" style="background-image: url(img/bg-img/video_kard.png);">
+                        <div class="video-play-btn">
+                            <!-- <video src="img/promo-video/kard_video.mp4"></video> 
+                                https://www.w3schools.com/tags/movie.mp4; img/promo-video/kard_video.mp4
+                            -->
+                            <a href="img/promo-video/kard2_video.mp4" class="video_btn"><i class="fa fa-play" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="thumbnail">
-      <h1 class="stats">7500</h1>
-      <h4>TITLE</h4>
-      <p>One line description</p>
+    <!-- ***** Video Area End ***** -->
+
+    
+
+    
+
+    <!-- ***** App Screenshots Area Start ***** -->
+    <section class="app-screenshots-area bg-white section_padding_0_100 clearfix" id="screenshot">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <!-- Heading Text  -->
+                    <div class="section-heading">
+                        <h2>App Screenshots</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!-- App Screenshots Slides  -->
+                    <div class="app_screenshots_slides owl-carousel">
+                        <div class="single-shot">
+                            <img src="img/scr-img/kk_onboard_1.png" alt="">
+                        </div>
+                        <div class="single-shot">
+                            <img src="img/scr-img/kk_onboard_2.png" alt="">
+                        </div>
+                        <div class="single-shot">
+                            <img src="img/scr-img/kk_onboard_3.png" alt="">
+                        </div>
+                        <div class="single-shot">
+                            <img src="img/scr-img/kk_onboard_4.png" alt="">
+                        </div>
+                        <div class="single-shot">
+                            <img src="img/scr-img/kk_onboard_5.png" alt="">
+                        </div>
+                        <div class="single-shot">
+                            <img src="img/scr-img/kk_onboard_6.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** App Screenshots Area End *****====== -->
+
+
+<!-- KARDSERVICE GOES HERE.....................   --- >
+<!--
+https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg
+-->
+
+<!-- large modal -->
+<div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Large Modal</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3>Modal Body</h3>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">Total</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-sm-8 col-md-6">
+                        <div class="media">
+                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="data:image/png;base64,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" style="width: 72px; height: 72px;padding-right:18px"> </a>
+                            <div class="media-body">
+                                <h4><a href="#" class="media-heading">Mango Flurries</a></h4>
+                                <h5><a href="#" class="media-heading">KIAKARDS</a></h5>
+                                <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
+                            </div>
+                        </div></td>
+                        <td class="col-sm-1 col-md-1" style="text-align: center">
+
+                        <input type="number" class="form-control text-center" id="kardInputQty1" value="3">
+                        </td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>$4.87</strong></td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>$14.61</strong></td>
+                        <td class="col-sm-1 col-md-1">
+                        <button type="button" class="btn btn-danger" class="close" data-dismiss="modal" aria-label="Close">
+                            <span class="glyphicon glyphicon-remove"></span> Remove
+                        </button>
+<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
+                    </td>
+                    </tr>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <tr>
+                        <td class="col-md-6">
+                        <div class="media">
+                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="data:image/png;base64,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" style="width: 72px; height: 72px;padding-right:18px"> </a>
+                            <div class="media-body">
+                                <h4><a href="#" class="media-heading">Cherry Freeze</a></h4>
+                                <h5><a href="#"class="media-heading" >KIAKARDS</a></h5>
+                                <span>Status: </span><span class="text-warning"><strong>Leaves warehouse in 2 - 3 weeks</strong></span>
+                            </div>
+                        </div></td>
+                        <td class="col-md-1" style="text-align: center">
+                        <input type="number" class="form-control text-center" id="kardInputQty2" value="2">
+                        </td>
+                        <td class="col-md-1 text-center"><strong>$4.99</strong></td>
+                        <td class="col-md-1 text-center"><strong>$9.98</strong></td>
+                        <td class="col-md-1">
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span> Remove
+                        </button>
+<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>	
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h5>Subtotal</h5></td>
+                        <td class="text-right"><h5><strong>$24.59</strong></h5></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h5>Estimated shipping</h5></td>
+                        <td class="text-right"><h5><strong>$6.94</strong></h5></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h3>Total</h3></td>
+                        <td class="text-right"><h3><strong>$31.53</strong></h3></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>
+                        <button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> < Shop More
+                        </button></td>
+                        <td>
+                        <button type="button" class="btn btn-success">
+                            Purchase <span class="glyphicon glyphicon-play"></span>
+                        </button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <div class="thumbnail">
-      <h1 class="stats">9870</h1>
-      <h4>TITLE</h4>
-      <p>One line description</p>
+
+
+
+<!-- ***** ************************ *****====== -->
+<!-- ***** Modal Details Area Begin *****====== -->
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Order</button>
+      </div>
     </div>
   </div>
-  <!-- Parallax Section -->
-  <section class="banner">
-    <h2 class="parallax">PARALLAX HERO</h2>
-    <p class="parallax_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-  </section>
-  <!-- More Info Section -->
-  <footer>
-    <article class="footer_column">
-      <h3>ABOUT</h3>
-      <img src="images/placeholder.jpg" alt="" width="400" height="200" class="cards"/>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </p>
-    </article>
-    <article class="footer_column">
-      <h3>LOCATION</h3>
-      <img src="images/placeholder.jpg" alt="" width="400" height="200" class="cards"/>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </p>
-    </article>
-  </footer>
-  <!-- Footer Section -->
-  <section class="footer_banner" id="contact">
-    <h2 class="hidden">Footer Banner Section </h2>
-    <p class="hero_header">FOR THE LATEST NEWS &amp; UPDATES</p>
-    <div class="button">subscribe</div>
-  </section>
-  <!-- Copyrights Section -->
-  <div class="copyright">&copy;2019- <strong>Light Theme</strong></div>
 </div>
-<!-- Main Container Ends -->
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+</section>
+
+    <!-- Display a payment form -->
+    <form id="payment-form">
+      <div id="card-element"><!--Stripe.js injects the Card Element--></div>
+      <button id="submit">
+        <div class="spinner hidden" id="spinner"></div>
+        <span id="button-text">Pay</span>
+      </button>
+      <p id="card-error" role="alert"></p>
+      <p class="result-message hidden">
+        Payment succeeded, see the result in your
+        <a href="" target="_blank">Stripe dashboard.</a> Refresh the page to pay again.
+      </p>
+    </form>
+
+<!--
+<div class="container-fluid">
+  <h2 class="madhatter" class="mt-5">Stripe.js v3 with Bootstrap 4 (beta) Test</h2>
+  <div id="card-errors" role="alert"></div>
+
+  <div class="card" id="highrolla">
+    <div class="card-body">
+      <form id="payment-form">
+
+        <div class="form-group">
+          <label for="name">Name on Card</label>
+          <div class="input-group">
+            <span class="input-group-addon">A</span>
+            <input id="first-name" name="first-name" class="field" placeholder="Manoj" />
+            <input type="text" class="form-control" id="name">
+            </div>
+<label for="cardnum">Number Card</label>
+            <div class="input-group">
+            <span class="input-group-addon">B</span>
+            <input type="text" class="form-control" id="card-number" value="4242 4242 4242 4242">
+            </div>
+<label for="cvcnum">CVC Card</label>
+            <div class="input-group">
+            <span class="input-group-addon">C</span>
+            <input type="text" class="form-control" id="card-cvc" value="123">
+            </div>
+<label for="date">Expiration Date</label>
+            <div class="input-group">
+            <span class="input-group-addon">D</span>
+            <input type="text" class="form-control" id="card-exp" value="04 / 24">
+            </div>
+ <label for="charge">Charge Amount</label>
+            <div class="input-group">
+            <span class="input-group-addon">E</span>
+            <input type="text" class="form-control" id="charge-amt" value="500">
+            </div> 
+        </div>
+       
+
+        <button id="submit" class="btn btn-primary">Submit Payment</button>
+
+        
+     </form>
+    </div>
+  </div>
+</div>-->
+
+
+
+
+<div class="container-fluid mt-0 ml-5 mr-3" id="kardshopper">
+    <h2 id="kardshop" class="section_padding_55_20_tweak">Kard Shop</h2>
+  <div class="row">
+    <!-- Heading Text  -->
+    <div id="myspacer">..
+
+        <hr/>
+    </div>            
+    <!-- card #one -->
+    <div class="col-sm-3">
+      <h2>MANGO<br />FLURRIES</h2>
+      <p>SKU# 001_KK_MF</p>
+
+      <div class="card" style="width: 250px;">
+        <img
+          class="card-img-top"
+          src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg"
+          alt="Card image"
+          style="width: 100%;"
+        />
+        <div class="card-body">
+          <h4 class="card-title">Mango Flurries</h4>
+          <p class="card-text">
+            These cards celebrate all that is good in life. Blessed with custom
+            printed stylings.
+          </p>
+          <hr />
+          <code class="cooter">SKU# 001_KK_MF</code>
+          <hr />
+          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#largeModal">DETAILS</a>
+        </div>
+        <!--end card-body -->
+      </div>
+      <!--end card -->
+    </div>
+    <!--end col -->
+
+    <!-- card #two -->
+    <div class="col-sm-3">
+      <h2>CHERRY<br />FREEZE</h2>
+      <p>SKU# 002_KK_CF</p>
+      <div class="card" style="width: 250px;">
+        <img
+          class="card-img-top"
+          src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg"
+          alt="Card image"
+          style="width: 100%;"
+        />
+
+        <div class="card-body">
+          <h4 class="card-title">Cherry Freeze</h4>
+          <p class="card-text">
+            These cards celebrate all that is good in life. Blessed with custom
+            printed stylings.
+          </p>
+          <hr />
+          <code class="cooter">SKU# 002_KK_CF</code>
+          <hr />
+          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#largeModal">DETAILS</a>
+        </div>
+        <!--end card-body -->
+      </div>
+      <!--end card -->
+    </div>
+    <!--end col -->
+
+    <!-- card #three -->
+    <div class="col-sm-3">
+      <h2>BANANA<br />BUMBLE</h2>
+      <p>SKU# 003_KK_BB</p>
+      <div class="card" style="width: 250px;">
+        <img
+          class="card-img-top"
+          src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg"
+          alt="Card image"
+          style="width: 100%;"
+        />
+
+        <div class="card-body">
+          <h4 class="card-title">Banana Bumble</h4>
+          <p class="card-text">
+            These cards celebrate all that is good in life. Blessed with custom
+            printed stylings.
+          </p>
+          <hr />
+          <code class="cooter">SKU# 003_KK_BB</code>
+          <hr />
+          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#largeModal">DETAILS</a>
+        </div>
+        <!--end card-body -->
+      </div>
+      <!--end card -->
+    </div>
+    <!--end col -->
+
+    <!-- card #four -->
+    <div class="col-sm-3">
+      <h2>BLUEBERRY<br />CRUMBLES</h2>
+      <p>SKU# 004_KK_BC</p>
+      <div class="card" style="width: 250px;">
+        <img
+          class="card-img-top"
+          src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg"
+          alt="Card image"
+          style="width: 100%;"
+        />
+
+        <div class="card-body">
+          <h4 class="card-title">Blueberry Crumbles</h4>
+          <p class="card-text">
+            These cards celebrate all that is good in life. Blessed with custom
+            printed stylings.
+          </p>
+          <hr />
+          <code class="cooter">SKU# 004_KK_BC</code>
+          <hr />
+          <a href="#" class="btn btn-primary">BUY</a>
+        </div>
+        <!--end card-body -->
+      </div>
+      <!--end card -->
+    </div>
+    <!--end col -->
+    <div id="myspacer">..
+        <hr/>
+    </div>
+    <!-- card #five -->
+    <div class="col-sm-3">
+      <h2>LEMON<br />TRIFLE</h2>
+      <p>SKU# 005_KK_LT</p>
+
+      <div class="card" style="width: 250px;">
+        <img
+          class="card-img-top"
+          src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg"
+          alt="Card image"
+          style="width: 100%;"
+        />
+
+        <div class="card-body">
+          <h4 class="card-title">Lemon Trifle</h4>
+          <p class="card-text">
+            These cards celebrate all that is good in life. Blessed with custom
+            printed stylings.
+          </p>
+          <hr />
+          <code class="cooter">SKU# 005_KK_LT</code>
+          <hr />
+          <a href="#" class="btn btn-primary">BUY</a>
+        </div>
+        <!--end card-body -->
+      </div>
+      <!--end card -->
+    </div>
+    <!--end col -->
+
+    <!-- card #six -->
+    <div class="col-sm-3">
+      <h2>RASPBERRY<br />PIE</h2>
+      <p>SKU# 006_KK_RP</p>
+      <div class="card" style="width: 250px;">
+        <img
+          class="card-img-top"
+          src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg"
+          alt="Card image"
+          style="width: 100%;"
+        />
+
+        <div class="card-body">
+          <h4 class="card-title">Raspberry Pie</h4>
+          <p class="card-text">
+            These cards celebrate all that is good in life. Blessed with custom
+            printed stylings.
+          </p>
+          <hr />
+          <code class="cooter">SKU# 006_KK_RP</code>
+          <hr />
+          <a href="#" class="btn btn-primary">BUY</a>
+        </div>
+        <!--end card-body -->
+      </div>
+      <!--end card -->
+    </div>
+    <!--end col -->
+
+    <!-- card #seven -->
+    <div class="col-sm-3">
+      <h2>ORANGE<br />CLOVER</h2>
+      <p>SKU# 007_KK_OC</p>
+      <div class="card" style="width: 250px;">
+        <img
+          class="card-img-top"
+          src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg"
+          alt="Card image"
+          style="width: 100%;"
+        />
+
+        <div class="card-body">
+          <h4 class="card-title">Orange Clover</h4>
+          <p class="card-text">
+            These cards celebrate all that is good in life. Blessed with custom
+            printed stylings.
+          </p>
+          <hr />
+          <code class="cooter">SKU# 007_KK_OC</code>
+          <hr />
+          <a href="#" class="btn btn-primary">BUY</a>
+        </div>
+        <!--end card-body -->
+      </div>
+      <!--end card -->
+    </div>
+    <!--end col -->
+
+    <!-- card #eight -->
+    <div class="col-sm-3">
+      <h2>APPLE<br />MAPLE</h2>
+      <p>SKU# 008_KK_AM</p>
+      <div class="card" style="width: 250px;">
+        <img
+          class="card-img-top"
+          src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg"
+          alt="Card image"
+          style="width: 100%;"
+        />
+
+        <div class="card-body">
+          <h4 class="card-title">Apple Maple</h4>
+          <p class="card-text">
+            These cards celebrate all that is good in life. Blessed with custom
+            printed stylings.
+          </p>
+          <hr />
+          <code class="cooter">SKU# 008_KK_AM</code>
+          <hr />
+          <a href="#" class="btn btn-primary">BUY</a>
+        </div>
+        <!--end card-body -->
+      </div>
+      <!--end card -->
+    </div>
+    <!--end col -->
+  </div>
+  <!--end row -->
+</div>
+<!--end container -->
+
+<!-- KARDSERVICE ENDS HERE.....................   --- >
+
+
+
+    <!-- ***** Client Feedback Area Start ***** -->
+    <section class="clients-feedback-area bg-white section_padding_100 clearfix" id="testimonials">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10">
+                    <div class="slider slider-for">
+                        <!-- Client Feedback Text  -->
+                        <div class="client-feedback-text text-center">
+                            <div class="client">
+                                <i class="fa fa-quote-left" aria-hidden="true"></i>
+                            </div>
+                            <div class="client-description text-center">
+                                <p>“ Paper has been around forever. It was in dire need of a little, shall we say…<i>“disruption”</i>.<br>KiaKards provides just the right amount of visual inspiration blended with creative chaos.<br>Order some KiaKards today, you won’t be disappointed. ”</p>
+                            </div>
+                            <div class="star-icon text-center">
+                                <i class="ion-ios-star"></i>
+                                <i class="ion-ios-star"></i>
+                                <i class="ion-ios-star"></i>
+                                <i class="ion-ios-star"></i>
+                                <i class="ion-ios-star"></i>
+                            </div>
+                            <div class="client-name text-center">
+                                <h5>Mensah O. Moody</h5>
+                                <p>Occassional Vegan</p>
+                            </div>
+                        </div>
+                        <!-- Client Feedback Text  -->
+                        <div class="client-feedback-text text-center">
+                            <div class="client">
+                                <i class="fa fa-quote-left" aria-hidden="true"></i>
+                            </div>
+                            <div class="client-description text-center">
+                                <p>“ The very first time I saw a KiaKard I knew it was for me.<br>It was fresh, new and colorful. I bought a set of each. "</p>
+                            </div>
+                            <div class="star-icon text-center">
+                                <i class="ion-ios-star"></i>
+                                <i class="ion-ios-star"></i>
+                                <i class="ion-ios-star"></i>
+                                <i class="ion-ios-star"></i>
+                                <i class="ion-ios-star"></i>
+                            </div>
+                            <div class="client-name text-center">
+                                <h5>Margaret Mead</h5>
+                                <p>Author</p>
+                            </div>
+                        </div>
+                        <!-- Client Feedback Text  -->
+                        <div class="client-feedback-text text-center">
+                            <div class="client">
+                                <i class="fa fa-quote-left" aria-hidden="true"></i>
+                            </div>
+                            <div class="client-description text-center">
+                                <p>" I'm not much of a writer per se but my wife is...getting a few cards for her seemed like a good fit.<br>And a happy wife, is a happy home. "</p>
+                            </div>
+                            <div class="star-icon text-center">
+                                <i class="ion-ios-star"></i>
+                                <i class="ion-ios-star"></i>
+                                <i class="ion-ios-star"></i>
+                                <i class="ion-ios-star"></i>
+                                <i class="ion-ios-star"></i>
+                            </div>
+                            <div class="client-name text-center">
+                                <h5>Bill Cobbler</h5>
+                                <p>Node Programmer</p>
+                            </div>
+                        </div>
+                        <!-- Client Feedback Text  -->
+                        <div class="client-feedback-text text-center">
+                            <div class="client">
+                                <i class="fa fa-quote-left" aria-hidden="true"></i>
+                            </div>
+                            <div class="client-description text-center">
+                                <p>" I love the idea of exploding creativity and freedom of expression.<br>I also have this immense respect for any person with a smidgen of  entrepreneurial spirit.<br>KiaKards just made sense. "</p>
+                            </div>
+                            <div class="star-icon text-center">
+                                <i class="ion-ios-star"></i>
+                                <i class="ion-ios-star"></i>
+                                <i class="ion-ios-star"></i>
+                                <i class="ion-ios-star"></i>
+                                <i class="ion-ios-star"></i>
+                            </div>
+                            <div class="client-name text-center">
+                                <h5>Amy Good</h5>
+                                <p>Corporate Executive</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Client Thumbnail Area -->
+                <div class="col-12 col-md-6 col-lg-5">
+                    <div class="slider slider-nav">
+                        <div class="client-thumbnail">
+                            <img src="img/team-img/client-7.png" alt="">
+                        </div>
+                        <div class="client-thumbnail">
+                            <img src="img/team-img/client-7.png" alt="">
+                        </div>
+                        <div class="client-thumbnail">
+                            <img src="img/team-img/client-7.png" alt="">
+                        </div>
+                        <div class="client-thumbnail">
+                            <img src="img/team-img/client-7.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Client Feedback Area End ***** -->
+
+    <!-- ***** CTA Area Start ***** -->
+    <section class="our-monthly-membership section_padding_50 clearfix">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="membership-description">
+                        <h2>Join our Monthly Membership</h2>
+                        <p>Find the perfect kard for you — 100% creativity guaranteed.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="get-started-button wow bounceInDown" data-wow-delay="0.5s">
+                        <a href="#">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** CTA Area End ***** -->
+
+    <!-- ***** Our Team Area Start ***** -->
+    <section class="our-Team-area bg-white section_padding_100_50 clearfix" id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <!-- Heading Text  -->
+                    <div class="section-heading">
+                        <h2>The KardMaker</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-team-member">
+                        <div class="member-image">
+                            <img src="img/team-img/Makiyah-1.jpg" alt="">
+                            <div class="team-hover-effects">
+                                <div class="team-social-icon">
+                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                    <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-text">
+                            <h4>Makiyah O. Moody</h4>
+                            <p>CEO-Founder, aka, The KardMaker</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-team-member">
+                        <div class="member-image">
+                            <img src="img/team-img/Makiyah-1.jpg" alt="">
+                            <div class="team-hover-effects">
+                                <div class="team-social-icon">
+                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                    <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-text">
+                            <h4>Makiyah O. Moody</h4>
+                            <p>CEO-Founder, aka, The KardMaker</p>
+                        </div>
+                    </div>
+                </div>
+               <!-- <div class="col-12 col-md-6 col-lg-3">
+                    <div class="single-team-member">
+                        <div class="member-image">
+                            <img src="img/team-img/Makiyah-1.jpg" alt="">
+                            <div class="team-hover-effects">
+                                <div class="team-social-icon">
+                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                    <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-text">
+                            <h4>Ollie Schneider</h4>
+                            <p>Business Planner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="single-team-member">
+                        <div class="member-image">
+                            <img src="img/team-img/Makiyah-1.jpg" alt="">
+                            <div class="team-hover-effects">
+                                <div class="team-social-icon">
+                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                    <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-text">
+                            <h4>Roger West</h4>
+                            <p>Financer</p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!-- ***** Our Team Area End ***** -->
+
+    <!-- ***** Contact Us Area Start ***** -->
+    <section class="footer-contact-area section_padding_100 clearfix" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Heading Text  -->
+                    <div class="section-heading">
+                        <h2 class="tidbit_lighter">Get in touch with us!</h2>
+                        <div class="line-shape"></div>
+                    </div>
+
+                    <div class="footer-text">
+                        <p>We'll send you epic weekly blogs, whitepapers and things to make your app startup thrive, all FREE!</p>
+                    </div>
+                    <div class="address-text">
+                        <p><span>Address:</span> 1 Clocktower Place, Nashua, NH, 03060, USA</p>
+                    </div>
+                    <div class="phone-text">
+                        <p><span>Phone:</span> +01-603-888-8888</p>
+                    </div>
+                    <div class="email-text">
+                        <p><span>Email:</span> info.kiakards@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!-- Form Start-->
+                    <div class="contact_from">
+                        <form action="#" method="post">
+                            <!-- Message Input Area Start -->
+                            <div class="contact_input_area">
+                                <div class="row">
+                                    <!-- Single Input Area Start -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="name" id="contactname" placeholder="Your Name" required>
+                                        </div>
+                                    </div>
+                                    <!-- Single Input Area Start -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Your E-mail" required>
+                                        </div>
+                                    </div>
+                                    <!-- Single Input Area Start -->
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Your Message *" required></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- Single Input Area Start -->
+                                    <div class="col-12">
+                                        <button type="submit" class="btn submit-btn">Send Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Message Input Area End -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Contact Us Area End ***** -->
+
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-social-icon text-center section_padding_70 clearfix">
+        <!-- footer logo -->
+        <div class="footer-text">
+            <h2>KiaKards.</h2>
+        </div>
+        <!-- social icon-->
+        <div class="footer-social-icon">
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="active fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+        </div>
+        <div class="footer-menu">
+            <nav>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Foooter Text-->
+        <div class="copyright-text">
+           <p>Copyright ©2020 KiaKards.</p>
+          
+        </div>
+    </footer>
+    <!-- ***** Footer Area Start ***** -->
+
+    <!-- Jquery-2.2.4 JS -->
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap-4 Beta JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All Plugins JS -->
+    <script src="js/plugins.js"></script>
+    <!-- Slick Slider Js-->
+    <script src="js/slick.min.js"></script>
+    <!-- Footer Reveal JS -->
+    <script src="js/footer-reveal.min.js"></script>
+    <!-- Active JS -->
+    <script src="js/active.js"></script>
+    
+    <script>
+
+</script>
 </body>
+
 </html>
