@@ -130,7 +130,7 @@
     #ca-navbar {
         padding: 20px;
         border-radius: 3px;
-        background-color: #5b32b4;
+        background-color: #96435b;
         text-align: left;
     }
     .sing-up-button {
@@ -249,6 +249,12 @@
     .get-start-area .email {
         max-width: 370px;
     }
+    #ca-navbar {
+        padding: 20px;
+        border-radius: 3px;
+        background-color: #96435b;
+        text-align: left;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -257,5 +263,11 @@
     }
     .get-start-area .email {
         margin-bottom: 0;
+    }
+    #ca-navbar {
+        padding: 20px;
+        border-radius: 3px;
+        background-color: #96435b;
+        text-align: left;
     }
 }
